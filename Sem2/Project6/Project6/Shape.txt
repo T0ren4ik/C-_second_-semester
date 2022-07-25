@@ -1,0 +1,7 @@
+6
+Poligon a2 b4 c4 d2
+Poligon a5 b5 c5 d5
+Square a10
+Square a3
+Triangle a3 b4 c5
+Triangle a3 b3 c3

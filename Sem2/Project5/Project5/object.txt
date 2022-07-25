@@ -1,0 +1,5 @@
+4
+Cone r1 h1
+Circle r2
+Sphere r3
+Cone r4 h1

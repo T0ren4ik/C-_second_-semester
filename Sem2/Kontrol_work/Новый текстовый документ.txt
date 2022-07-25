@@ -1,0 +1,48 @@
+
+
+
+
+class student {
+	string name;
+	int course, group;
+public:
+	student(string name, int course = 4, int group = 4) :
+		name(name), course(course), group(group) {}
+	string get_name() { return name; }
+	int get_course() const { return course; }
+	int get_group() { return group; }
+	friend ostream& operator<<(ostream& os, const student& S) {
+		os << S.name << " " << S.course << "." << S.group << endl;
+	}
+};
+
+
+class bachelor : public student {
+private:
+	string topic;
+	int year, ball;
+public:
+	bachelor(string N, string T, int B, int Y): student(N), topic(T), year(Y), ball(B) {};
+	string get_topic() { return topic; }
+	int get_year() { return year; }
+	int get_ball() { return ball; }
+	friend ostream& operator<<(ostream& os, const bachelor& S) {
+		os << (student)S;
+		os << S.topic << " " << S.year << "." << S.ball << endl;
+	}
+};
+
+
+class conscript : public student {
+private:
+	int year, size, height;
+public:
+	conscript(string N, int H, int S, int Y) : student(N), height(H), year(Y), size(S) {};
+	int get_year() { return year; }
+	int get_height() { return height; }
+	int get_size() { return size; }
+	friend ostream& operator<<(ostream& os, const conscript& S) {
+		os << (student)S;
+		os << S.year << " " << S.size << "." << S.height << endl;
+	}
+};
